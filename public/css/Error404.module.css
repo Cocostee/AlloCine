@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  animation: rainbowBackground 5s infinite;
+  font-family: "Comic Sans MS", cursive;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  overflow: hidden;
+}
+
+@keyframes rainbowBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.title {
+  font-size: 10rem;
+  transform: rotate(-15deg);
+  text-shadow: 4px 4px 0px #ff9900, -4px -4px 0px #00ccff;
+  animation: wobble 2s infinite;
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+
+.message {
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-shadow: 3px 3px #000;
+  animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, 5px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  75% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(5px, 5px);
+  }
+}
+
+.randomText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff0;
+  text-shadow: 2px 2px 0 #f00, -2px -2px 0 #00f;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animation {
+  font-size: 3rem;
+  margin: 2rem 0;
+  animation: sparkles 1.5s infinite;
+}
+
+@keyframes sparkles {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.goBackButton {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background: #ff0;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.goBackButton:hover {
+  background: #f00;
+  color: #fff;
+  transform: scale(1.2) rotate(10deg);
+}

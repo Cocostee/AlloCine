@@ -1,0 +1,157 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.mainContent {
+  flex: 3;
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+
+.mainContent img {
+  width: 300;
+  border-radius: 15px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.mainContent button {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.similarFilms {
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.similarFilms h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.similarFilms ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.similarFilmCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.similarFilmCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.similarFilmCard img {
+  width: 100px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.similarFilmCard p {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.actors {
+  margin-top: 40px;
+}
+
+.actors h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.actorsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0;
+}
+
+.actorCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.actorCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.actorCard img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.actorCard p {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.notFound {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  display: block;
+  animation: spin 4s linear infinite;
+  text-align: center;
+}
+
+.loading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+  display: block;
+  animation: spin 4s linear infinite;
+  text-align: center;
+}
