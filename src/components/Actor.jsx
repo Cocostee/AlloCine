@@ -12,7 +12,11 @@ const Actors = ({ actors }) => {
         {actors.map((actor) => (
           <div key={actor.id} className={styles.actorCard}>
             <img
-              src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
+              src={
+                actor.profile_path
+                  ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
+                  : "/public/ImagineNonDispo.png"
+              }
               alt={actor.name}
               className={styles.actorImage}
             />

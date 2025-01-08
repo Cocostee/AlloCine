@@ -16,7 +16,11 @@ const SimilarFilms = ({ similarFilms }) => {
           <Link to={`/film/${film.id}`} key={film.id} className={styles.link}>
             <li className={styles.similarFilmCard}>
               <img
-                src={`https://image.tmdb.org/t/p/w200${film.poster_path}`}
+                src={
+                  film.poster_path
+                    ? `https://image.tmdb.org/t/p/w200${film.poster_path}`
+                    : "/public/ImagineNonDispo.png"
+                }
                 alt={film.original_title}
                 className={styles.similarFilmImage}
               />

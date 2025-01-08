@@ -57,7 +57,11 @@ const FilmDetail = () => {
         <div className={styles.detailsSection}>
           <h1 className={styles.title}>{film.original_title}</h1>
           <img
-            src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+            src={
+              film.poster_path
+                ? `https://image.tmdb.org/t/p/w400${film.poster_path}`
+                : "/public/ImagineNonDispo.png"
+            }
             alt={film.original_title}
             className={styles.poster}
           />
